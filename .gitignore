@@ -37,3 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# packrat libraries
+packrat/lib*/
+packrat/src
+
+# place to store random files you don't want on github
+/local/
