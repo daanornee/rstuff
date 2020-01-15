@@ -1,0 +1,38 @@
+---
+title: "Install"
+output: html_document
+---
+
+## Create a repository
+
+* Go to github.com
+* Login or Sign up for an account
+* Goto https://github.com/hampei/rstuff
+* Top right corner press the fork button
+* Follow the directions until you see the repository on you account.
+* "Clone or download" > "use HTTPS" > copy url
+
+## Install basics
+
+* Install git: https://happygitwithr.com/install-git.html#install-git
+
+## Checkout repository
+
+* Open RStudio
+* File > New Project  
+* Version Control > Git
+* paste github url
+* select a parent directory
+* "Create Project"
+
+![new project form](images/rstudio_new_project_clone_git.png)
+
+## install packages
+
+* `install.packages("packrat")`
+* `packrat::restore()`
+
+## test basics
+
+* `rmarkdown::render_site(input="site", quiet=F)`
+* Open site/html/index.html 
