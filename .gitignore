@@ -44,3 +44,6 @@ packrat/src/
 
 # place to store random files you don't want on github
 /local/
+
+/site/gh-pages
+/site/html

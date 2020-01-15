@@ -1,0 +1,15 @@
+name: "Cool R stuff"
+output_dir: "html"
+navbar:
+  title: "Cool R stuff"
+  left:
+    - text: Index
+      href: index.html
+    - text: Quick install
+      href: install_quick.html
+    - text: "Install"
+      href: install.html
+output:
+   html_document:
+      theme: cosmo
+exclude: ["gh-pages"]
