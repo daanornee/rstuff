@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Install</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Cool R stuff</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Index</a>
+</li>
+<li>
+  <a href="install_quick.html">Quick install</a>
+</li>
+<li>
+  <a href="install.html">Install</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Install</h1>
+
+</div>
+
+
+<div id="create-a-repository" class="section level2">
+<h2>Create a repository</h2>
+<ul>
+<li>Go to github.com</li>
+<li>Login or Sign up for an account</li>
+<li>Click on the New button next Repositories.</li>
+<li>Add an R .gitignore file</li>
+<li>Add a license</li>
+<li>“Create repository”</li>
+<li>“Clone or download” &gt; “use HTTPS” &gt; copy url</li>
+</ul>
+<div class="figure">
+<img src="images/github_new_project_form.png" alt="new project form" />
+<p class="caption">new project form</p>
+</div>
+</div>
+<div id="install-basics" class="section level2">
+<h2>Install basics</h2>
+<ul>
+<li>Install git: <a href="https://happygitwithr.com/install-git.html#install-git" class="uri">https://happygitwithr.com/install-git.html#install-git</a></li>
+</ul>
+</div>
+<div id="checkout-repository" class="section level2">
+<h2>Checkout repository</h2>
+<ul>
+<li>Open RStudio</li>
+<li>File &gt; New Project<br />
+</li>
+<li>Version Control &gt; Git</li>
+<li>paste github url</li>
+<li>select a parent directory</li>
+<li>“Create Project”</li>
+</ul>
+<div class="figure">
+<img src="images/rstudio_new_project_clone_git.png" alt="clone new project" />
+<p class="caption">clone new project</p>
+</div>
+</div>
+<div id="first-commit" class="section level2">
+<h2>First commit</h2>
+<ul>
+<li>Open the git panel on the right <img src="images/rstudio_git_panel.png" alt="new project form" /></li>
+<li>click commit</li>
+<li>select both files</li>
+<li>enter a commit message</li>
+<li>press commit</li>
+<li>press push</li>
+<li>enter github details</li>
+</ul>
+<div class="figure">
+<img src="images/rstudio_git_review_changes.png" alt="review changes" />
+<p class="caption">review changes</p>
+</div>
+</div>
+<div id="install-packrat" class="section level2">
+<h2>Install packrat</h2>
+<ul>
+<li>Back on the main screen open the Packages panel</li>
+<li>Click on “Packrat”</li>
+<li>Select “Use packrat with this project”</li>
+<li>Ok</li>
+<li>If a popup appears to install extra pacakges say yes.</li>
+<li>Select the options you want</li>
+<li>press ok</li>
+<li><p>commit all changes files and push, only these files should be visible:</p>
+<pre><code>new file:   .Rprofile
+modified:   .gitignore
+new file:   packrat/init.R
+new file:   packrat/packrat.lock
+new file:   packrat/packrat.opts</code></pre></li>
+</ul>
+<div class="figure">
+<img src="images/rstudio_packrat_enable.png" alt="enable packrat" />
+<p class="caption">enable packrat</p>
+</div>
+</div>
+<div id="install-rmarkdown" class="section level2">
+<h2>Install rmarkdown</h2>
+<ul>
+<li>Install the <code>rmarkdown</code> package.</li>
+<li>create a new folder <code>site</code> and enter it</li>
+<li>“File” &gt; “New File” &gt; “R Markdown…”</li>
+<li>press ok and save it to <code>site/index.Rmd</code></li>
+<li>Press the <code>Knit</code> button at the top of the file to test.</li>
+<li><p>Add site/_site.yml with</p>
+<pre><code>name: &quot;Cool R stuff&quot;
+output_dir: &quot;html&quot;
+navbar:
+  title: &quot;Cool R stuff&quot;
+  left:
+    - text: &quot;Index&quot;
+      href: index.html
+    - text: &quot;Install&quot;
+      href: install.html
+output:
+   html_document:
+      theme: cosmo
+exclude: [&quot;public&quot;]</code></pre></li>
+<li><p>add <code>/site/html</code> to .gitignore file so the generated html is not added to git.</p></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
