@@ -1,0 +1,89 @@
+---
+title: "Talk"
+output: slidy_presentation
+---
+
+# What is reproducible research?
+
+Or rather, what is reproducible data analysis?
+
+* Any research that involves statistical data analysis will usually contain many figures and tables of statistical results, and also numerous statistical results within the text. 
+
+* The goal of reproducible research --- or rather, *reproducible data analysis* --- is that anyone working independently could recreate all of these results exactly.
+
+
+(This slide was taken from https://github.com/mark-andrews/sips2019)
+
+# Necessary criteria for reproducible data analysis
+
+* The following three criteria seem necessary for a given data analysis to be reproducible.
+
+  1. The *raw* data must be available. Data that is processed and "cleaned up" is not sufficient. 
+  2. All the code for all the analysis must be available. All the code for all the data analysis pipeline is required, as are the scripts and build tools that execute the code. 
+  3. The reports of the analysis, e.g., journal articles, presentations slides, etc, must be made by *dynamic documents*. 
+
+* @gentleman2007statistical introduced the concept of a *research compendium*, which is a single package that contains all of the raw data, all the code for all the data analysis pipeline, and dynamic documents that generate all the final reports.
+
+
+(This slide was taken from https://github.com/mark-andrews/sips2019)
+
+# Software tools for reproducible data analysis
+
+  * RMarkdown (and knitr, pandoc, \LaTeX, etc
+  * Git & GitHub (version control)
+  * Packrat (package manager)
+  * testthat
+  * Docker
+
+  * clean code
+  * documenting code
+  
+# What is git?
+
+* Distributed version control
+* Many advantages even when used without a server
+
+# Why use git?
+
+* Backup
+* Versioning
+* Easy to collaborate
+* Easy to try things (revert if things break)
+* Easy to check what you changed (why you broke it)
+* Easier to check when you broke something ([bisect](https://git-scm.com/docs/git-bisect "Click when you need it"))
+
+# Git
+
+<img src="images/git_branches.png" style="float: right" />
+
+* commit (often!)
+* branch
+* master (default branch)
+* remote
+* clone
+* pull
+* push
+* merge
+* rebase
+* staging area
+* tag (https://github.com/hampei/rstuff/releases)
+* sha
+* stash
+* wip
+
+# Github.com
+
+* README.md entrypoint for most software projects.
+* github pages
+* pull request
+* fork
+
+
+# some command for the command line
+
+Some things can't be done within rstudio.
+
+* `git stash` save uncommitted changes and reset to last commit.
+* `git stash pop` apply the last stashed change 
+* `git reset --hard origin/master` dangerously throw away local changes and go back to what's on the server.
+* 

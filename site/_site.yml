@@ -7,8 +7,10 @@ navbar:
       href: index.html
     - text: Quick install
       href: install_quick.html
-    - text: "Install"
+    - text: Install
       href: install.html
+    - text: slides
+      href: talk.html
 output:
    html_document:
       theme: cosmo
