@@ -42,6 +42,9 @@ vignettes/*.pdf
 packrat/lib*/
 packrat/src/
 
+# generated man pages
+man/
+
 # place to store random files you don't want on github
 /local/
 

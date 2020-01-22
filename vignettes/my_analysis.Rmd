@@ -1,0 +1,18 @@
+<!--
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{ISMB Twitter Analysis}
+%\VignetteDepends{ggplot2, rstuff}
+-->
+
+# My analysis
+
+```{r iris2}
+library(rstuff)
+iris2 = iris.scale.width(2)
+plot(iris2$Petal.Length, iris2$Petal.Width, main="Edgar Anderson's Iris Data (double width)")
+```
+
+```{r iris5, echo=FALSE}
+iris5 = iris.scale.width(5)
+plot(iris5$Petal.Length, iris5$Petal.Width, main="Edgar Anderson's Iris Data (double width)")
+```
