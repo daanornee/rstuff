@@ -71,12 +71,60 @@ Or rather, what is reproducible data analysis?
 * stash
 * wip
 
+# Staging, local, remote
+
+![Staging area to local to remote](images/git_areas.png)
+
 # Github.com
 
 * README.md entrypoint for most software projects.
 * github pages
 * pull request
 * fork
+
+# Coding style
+
+* Be consistent.
+* Use https://style.tidyverse.org/ if there's no reason for a different one.
+
+* function names: lower case, numbers and underscores: `calc_the_thing()`
+* always a space after a comma, never before: `x[, 1]`
+* spaces: `mean(x, na.rm = TRUE)`, `x == y`, `x <- y`
+* name arguments, unless it's completely clear what it does: `mean(1:10, na.rm = TRUE)`
+* keep lines under 80ish characters
+* one command per line, don't use `;`
+
+# functions
+
+* strive to use verbs
+* align arguments when the line gets too long
+
+
+```
+add_a_to_b <- function(a = "a long argument",
+                       separator = ", ",
+                       b = "another long argument") {
+  str_c(a, separator, b) # only use return for early returns
+}
+```
+
+# Pipes
+
+* Use pipes for a sequence of actions
+
+```
+iris %>%
+  group_by(Species) %>%
+  summarize_if(is.numeric, mean) %>%
+  ungroup() %>%
+  gather(measure, value, -Species) %>%
+  arrange(value)
+```
+
+# exercise
+
+
+* Create a new branch and name it 
 
 
 # some command for the command line

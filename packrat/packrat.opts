@@ -8,6 +8,7 @@ local.repos:
 load.external.packages.on.startup: TRUE
 ignored.packages:
     usethis
+    rstuff
 ignored.directories:
     data
     inst

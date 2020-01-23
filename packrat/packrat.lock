@@ -3,25 +3,74 @@ PackratVersion: 0.5.0
 RVersion: 3.6.1
 Repos: CRAN=https://cran.rstudio.com/
 
+Package: BH
+Source: CRAN
+Version: 1.72.0-3
+Hash: fc53be86f0b712d3de03fef95893d710
+
+Package: R6
+Source: CRAN
+Version: 2.4.1
+Hash: b488861d8c3dfac497e041ec911df9fb
+
 Package: Rcpp
 Source: CRAN
 Version: 1.0.3
 Hash: 99f6a1855b2f9434e1399d565d2ed9df
+
+Package: assertthat
+Source: CRAN
+Version: 0.2.1
+Hash: 622be49032fe50bd42e96aaef613e209
+
+Package: backports
+Source: CRAN
+Version: 1.1.5
+Hash: 35ad64fcf2063e2a52031b0f1a59d8f0
 
 Package: base64enc
 Source: CRAN
 Version: 0.1-3
 Hash: c590d29e555926af053055e23ee79efb
 
+Package: cli
+Source: CRAN
+Version: 2.0.1
+Hash: 8e710a5f3177f1db9c6138e1dcbdfc30
+Requires: assertthat, crayon, fansi, glue
+
+Package: crayon
+Source: CRAN
+Version: 1.3.4
+Hash: ff2840dd9b0d563fc80377a5a45510cd
+
 Package: digest
 Source: CRAN
 Version: 0.6.23
 Hash: 7ec748e53ca45166e0824224421529ad
 
+Package: dplyr
+Source: CRAN
+Version: 0.8.3
+Hash: 0cad5e2e3fa1ffb4b3dc9fb9462d1579
+Requires: BH, R6, Rcpp, assertthat, glue, magrittr, pkgconfig, plogr,
+    rlang, tibble, tidyselect
+
+Package: ellipsis
+Source: CRAN
+Version: 0.3.0
+Hash: 30b58109e4d7c6184a9c2e32f9ae38c6
+Requires: rlang
+
 Package: evaluate
 Source: CRAN
 Version: 0.14
 Hash: 18306cc3bc1aec7b7360eea8a0eb0ee1
+
+Package: fansi
+Source: CRAN
+Version: 0.4.1
+Hash: fc0a252b8e427847d13e89f56ab4665e
 
 Package: glue
 Source: CRAN
@@ -48,7 +97,7 @@ Package: knitr
 Source: CRAN
 Version: 1.26
 Hash: 779c00d598441cbc415058a49178fcf8
-Requires: evaluate, highr, xfun, yaml, stringr, markdown
+Requires: evaluate, highr, markdown, stringr, xfun, yaml
 
 Package: magrittr
 Source: CRAN
@@ -71,6 +120,28 @@ Source: CRAN
 Version: 0.5.0
 Hash: 498643e765d1442ba7b1160a1df3abf9
 
+Package: pillar
+Source: CRAN
+Version: 1.4.3
+Hash: 64ebcd61a33f2bd9059ffa8a323fd620
+Requires: cli, crayon, fansi, rlang, utf8, vctrs
+
+Package: pkgconfig
+Source: CRAN
+Version: 2.0.3
+Hash: 5ff5f2361851a49534c96caa2a8071c7
+
+Package: plogr
+Source: CRAN
+Version: 0.2.0
+Hash: 81a8008a5e7858552503935f1abe48aa
+
+Package: purrr
+Source: CRAN
+Version: 0.3.3
+Hash: d4f497f8a97ef6c7182a87b2476748d1
+Requires: magrittr, rlang
+
 Package: rlang
 Source: CRAN
 Version: 0.4.2
@@ -80,8 +151,8 @@ Package: rmarkdown
 Source: CRAN
 Version: 2.0
 Hash: 7804c349f69af5cdf4137f39f814b088
-Requires: base64enc, evaluate, jsonlite, mime, xfun, yaml, htmltools,
-    stringr, tinytex, knitr
+Requires: base64enc, evaluate, htmltools, jsonlite, knitr, mime,
+    stringr, tinytex, xfun, yaml
 
 Package: stringi
 Source: CRAN
@@ -94,11 +165,34 @@ Version: 1.4.0
 Hash: 67da32dbb2a7a16f2ef124336358e54a
 Requires: glue, magrittr, stringi
 
+Package: tibble
+Source: CRAN
+Version: 2.1.3
+Hash: f59680d81ddc45fa3fcb8c07686d1d89
+Requires: cli, crayon, fansi, pillar, pkgconfig, rlang
+
+Package: tidyselect
+Source: CRAN
+Version: 0.2.5
+Hash: 5cbca8a84b427f46bea4ee5c6c7fe36e
+Requires: Rcpp, glue, purrr, rlang
+
 Package: tinytex
 Source: CRAN
 Version: 0.19
 Hash: 226b8679e3240c19c1a9da43e595a07b
 Requires: xfun
+
+Package: utf8
+Source: CRAN
+Version: 1.1.4
+Hash: f3f97ce59092abc8ed3fd098a59e236c
+
+Package: vctrs
+Source: CRAN
+Version: 0.2.1
+Hash: 8ba1577e36ecf03aed0660c019fe7097
+Requires: backports, digest, ellipsis, glue, rlang, zeallot
 
 Package: xfun
 Source: CRAN
@@ -109,3 +203,8 @@ Package: yaml
 Source: CRAN
 Version: 2.2.0
 Hash: a5ad5616d83d89f8d84cbf3cf4034e13
+
+Package: zeallot
+Source: CRAN
+Version: 0.1.0
+Hash: 10b2ed48e202b4db421ae864041dc4b2
